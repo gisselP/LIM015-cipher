@@ -4,11 +4,38 @@
     <meta charset="utf-8">
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/e9f8da1aa8.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="root">
-      <h1>Hello world!</h1>
-    </div>
+    <header class="header">
+      <ul class="list">
+        <li class ="img-container">
+            <img src="/img/padlock.png" alt="enigma">
+        </li>
+        <li class="items">
+          <h1 class="title">CRIPTOCHAT</h1>
+        </li>
+        <li class="items">
+          <i class="fas fa-redo-alt"></i>
+        </li>
+        <li class="items">
+          <i class="fas fa-ellipsis-v"></i>
+        </li>
+      </ul>
+    </header>
+    <main class="main">
+      <section >
+        <p> 
+        Pon tus mensajes aquí y CriptoChat los cifrará para que nadie pueda entenderlos. Puede ser desde mensajes para tu ex o a hasta mensajes para la CIA. También desciframos mensajes ocultos que solo tú puedes averiguar.</p>
+      </section>
+       <textarea name="textArea" id="firstText" class="typeText"></textarea>
+       <div id="secondText" class="receivedText">
+       </div>
+    </main>
+    <footer class="footer">
+      <input type="submit" id="buttonCipher" value="Cifrar">
+      <input type="submit" value="Descifrar">
+    </footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>
