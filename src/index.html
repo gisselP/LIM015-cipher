@@ -13,10 +13,10 @@
             <img src="/img/padlock.png" alt="enigma">
         </li>
         <li class="items">
-          <h1 class="title">CRIPTOCHAT</h1>
+          <h1 class="title">EnigmaChat</h1>
         </li>
         <li class="items">
-          <i class="fas fa-redo-alt"></i>
+          <i class="fas fa-redo-alt" id="refresh"></i>
         </li>
         <li class="items">
           <i class="fas fa-ellipsis-v"></i>
@@ -24,18 +24,20 @@
       </ul>
     </header>
     <main class="main">
-      <section >
+      <section>
         <p> 
-        Pon tus mensajes aquí y CriptoChat los cifrará para que nadie pueda entenderlos. Puede ser desde mensajes para tu ex o a hasta mensajes para la CIA. También desciframos mensajes ocultos que solo tú puedes averiguar.</p>
+        Pon tus mensajes aquí y EnigmaChat los cifrará para que nadie pueda entenderlos. Puede ser desde mensajes para tu ex o a hasta mensajes para la CIA. También desciframos mensajes ocultos que solo tú puedes averiguar.</p>
       </section>
-       <textarea name="textArea" id="firstText" class="typeText"></textarea>
-       <div id="secondText" class="receivedText">
-       </div>
+      <textarea name="textArea" id="firstText" required></textarea>
+      <div id="secondText" class="textArea">
+      </div>
     </main>
     <footer class="footer">
-      <input type="submit" id="buttonCipher" value="Cifrar">
-      <input type="submit" value="Descifrar">
-      <input type="number" id = "number">
+      <div class="container">
+        <input type="submit" id="buttonCipher" value="Cifrar" >
+        <input type="submit" id="buttonDecipher" value="Descifrar">
+        <input type="number" id = "number" placeholder="0" min="0" required>
+      </div>
     </footer>
     <script src="index.js" type="module"></script>
   </body>
