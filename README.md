@@ -15,6 +15,7 @@ Así que pensé, ¿por qué no hago la mía?. Es así como nace EnigmaChat.
 ## 2. Propuesta
 
 La aplicación que encriptará los mensajes que quieras, para que los mandes a cualquiera.
+
 Estos son los bocetos que realicé
 
 ![alt text](src/img/enigmaChat1.jpg)
