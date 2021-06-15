@@ -41,19 +41,19 @@ function allLetter(){
 
    if(text==""){
       secondText.style.display="none";
-      alert("Escriba el texto")
+      alert("¡Hey! No te olvides de poner el texto")
       return false;
    }
    if(numberInput.value==""){
       secondText.style.display="none";
-      alert("Ponga el número")
+      alert("Psst... se te olvidó el número")
       return false;
    }
    const letters = /^[a-zA-Z áéíóúÁÉÍÓÚñÑ\s]*$/;
    if(text.match(letters)){
       return true;
    }else{
-     alert("solo letras por ahora");
+     alert("Solo letras, por ahora");
      return false;
    }
 }

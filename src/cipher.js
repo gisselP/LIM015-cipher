@@ -1,43 +1,43 @@
 const cipher = {
     encode:function (number,text){  /* Para cifrar el texto */
 
-        let result="", code;
+        let result="", offset;
 
         for( let i = 0; i<text.length ; i++) {
             
-            let asciiNum= text.charCodeAt(i); /* Con charCodeAt obtienes el código ascii(números) de cada caracter de text */
+            let asciiNumber= text.charCodeAt(i); /* Con charCodeAt obtienes el código ascii(números) de cada caracter de text */
             
-            if(asciiNum >= 65 && asciiNum <= 90){  /* Esta condición solo es para mayúsculas */
-                code = ( ( (asciiNum - 65) + number) %26) + 65; /* Aplicamos la fórmula para saber cuál es la nueva posición*/
+            if(asciiNumber >= 65 && asciiNumber <= 90){  /* Esta condición solo es para mayúsculas */
+                offset = ( ( (asciiNumber - 65) + number) %26) + 65; /* Aplicamos la fórmula para saber cuál es la nueva posición*/
             
-            }else if(asciiNum===32){  /* Esta condición solo es para que respete el espacio */
-                code = 32;
+            }else if(asciiNumber === 32){  /* Esta condición solo es para que respete el espacio */
+                offset = 32;
 
-            }else if(asciiNum >= 97 && asciiNum <= 122){ /* Esta condición solo es para minúsculas */
-                code = ( ( (asciiNum - 97) + number) %26) + 97;
+            }else if(asciiNumber >= 97 && asciiNumber <= 122){ /* Esta condición solo es para minúsculas */
+                offset = ( ( (asciiNumber - 97) + number) %26) + 97;
             }
-            result+=String.fromCharCode(code); /* con String.fromCharCode cambiará los números por letras */ 
+            result+=String.fromCharCode(offset); /* con String.fromCharCode cambiará los números por letras */ 
         } 
         return result;
     },
     
     decode:function (number,text){/* Para descifrar el texto */
 
-        let result="", code;
+        let result="", offset;
 
         for( let i = 0; i<text.length ; i++) {
-            let asciiNum= text.charCodeAt(i);
+            let asciiNumber= text.charCodeAt(i);
 
-            if(asciiNum >= 65 && asciiNum <= 90){
-                code =  ( asciiNum - 90 - number) %26 + 90;  /* la fórmula varía porque ahora se desplaza de forma contraria */
+            if(asciiNumber >= 65 && asciiNumber <= 90){
+                offset =  ( asciiNumber - 90 - number) %26 + 90;  /* la fórmula varía porque ahora se desplaza de forma contraria */
 
-            }else if(asciiNum===32){
-                code=32;
+            }else if(asciiNumber===32){
+                offset=32;
 
-            }else if(asciiNum >= 97 && asciiNum <= 122){
-                code = ( ( (asciiNum - 122) - number) %26) + 122;
+            }else if(asciiNumber >= 97 && asciiNumber<= 122){
+                offset = ( ( (asciiNumber - 122) - number) %26) + 122;
             }
-            result+=String.fromCharCode(code);
+            result+=String.fromCharCode(offset);
         } 
         return result;
     }
