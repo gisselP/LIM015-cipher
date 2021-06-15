@@ -3,7 +3,9 @@
 ## 1. Idea
 
 En un principio no tenía claro qué temática usar para la aplicación web. Lo único que se me venía a la mente era la película El código enigma (The Imitation Game). Ahí mostraban cómo un matemático logró crear una máquina, que descifraba mensajes secretos de los nazis, para poder ganar la guerra.
+
 ![alt text](src/img/enigma.jpg)
+
 ![alt text](src/img/turing.jpg)
 
 ¿Cómo poner todo eso en una app? ¿Entenderán que es una referencia ? ¿Tengo que explicar todo lo anterior en la web?. Todas esas preguntas llenaron mi cabeza, así que decidí solo quedarme con lo escencial. Recibir y mandar mensajes. Pero ¿cómo llevarlo a un contexto actual?.Mensajería instantánea. Whatsapp, Telegram, Signal y muchas más aplican el sistema de cifrar mensajes por nuestra seguridad.
