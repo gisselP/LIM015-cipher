@@ -7,13 +7,11 @@
 import cipher from '../src/cipher';
 
 describe('cipher', () => {
-
   it('should be an object', () => {
     expect(typeof cipher).toBe('object');
   });
 
   describe('cipher.encode', () => {
-
     it('should be a function', () => {
       expect(typeof cipher.encode).toBe('function');
     });
@@ -29,8 +27,11 @@ describe('cipher', () => {
       expect(cipher.encode(33, 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')).toBe('HIJKLMNOPQRSTUVWXYZABCDEFG');
     });
 
+    it('should return " " for " " with offset 33', () => {
+      expect(cipher.encode(33, ' ')).toBe(' ');
+    });
+
     // Hacker edition
-    //
     // [Español]
     // Si decides agregar soporte para minúsculas descomenta el test a
     // continuación.
@@ -39,6 +40,7 @@ describe('cipher', () => {
     // Se quiser adicionar testes para letras minúsculas, descomente o teste
     // abaixo.
     //
+
     it('should return "hijklmnopqrstuvwxyzabcdefg" for "abcdefghijklmnopqrstuvwxyz" with offset 33', () => {
       expect(cipher.encode(33, 'abcdefghijklmnopqrstuvwxyz')).toBe('hijklmnopqrstuvwxyzabcdefg');
     });
@@ -59,7 +61,6 @@ describe('cipher', () => {
   });
 
   describe('cipher.decode', () => {
-
     it('should be a function', () => {
       expect(typeof cipher.decode).toBe('function');
     });
@@ -75,7 +76,11 @@ describe('cipher', () => {
       expect(cipher.decode(33, 'HIJKLMNOPQRSTUVWXYZABCDEFG')).toBe('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
     });
 
-    //
+    it('should return " " for " " with offset 33', () => {
+      // eslint-disable-next-line semi
+      expect(cipher.decode(33, ' ')).toBe(' ');
+    });
+
     // Hacker edition
     //
     // [Español]
@@ -104,5 +109,4 @@ describe('cipher', () => {
     //   expect(cipher.decode(33, ' !@')).toBe(' !@');
     // });
   });
-
 });

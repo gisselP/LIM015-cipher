@@ -35,4 +35,18 @@ Manteniene lo sobrio y frío pero también se distingue del resto. Además es un
 
 ## 3. Aplición
 
-![alt text](src/img/web.png)
+El fin de esta aplicación es divertirte con tus amigos, mandando mensajes de texto aparentemente sin sentido. Con el número clave accede al verdadero mensaje y también cifra ese mensaje que tanto te da verguenza mandar.
+
+![alt text](src/img/interfaz1.png)
+
+Puedes ir directamente a las aplicaciones de mensajería sin tener que salir de EnigmaChat.
+
+![alt text](src/img/interfaz2.png)
+
+Pero sin que se te olvide de poner el texto.
+
+![alt text](src/img/interfaz3.png)
+
+O también el número.
+
+![alt text](src/img/interfaz4.png)
