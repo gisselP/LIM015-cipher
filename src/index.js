@@ -3,8 +3,6 @@ import cipher from './cipher.js';
 const firstText = document.getElementById('firstText');
 const secondText = document.getElementById('secondText');
 const numberInput = document.getElementById('number');
-let cipherText = ' ';
-let decipherText = ' ';
 const buttonCipher = document.getElementById('buttonCipher');
 const buttonDecipher = document.getElementById('buttonDecipher');
 const buttonRefresh = document.getElementById('refresh');
@@ -32,18 +30,18 @@ function allLetter () {
 buttonCipher.addEventListener('click', () => {
   secondText.style.display = 'block';
   allLetter();
-  const text = firstText.value;
+  const text = document.getElementById('firstText').value;
   const number = parseInt(numberInput.value);
-  cipherText = cipher.encode(number, text);
-  secondText.innerText = cipherText;
+  const cipherText = cipher.encode(number, text);
+  secondText.innerHTML = cipherText;
 });
 buttonDecipher.addEventListener('click', () => {
   secondText.style.display = 'block';
   allLetter();
   const text = firstText.value;
   const number = parseInt(numberInput.value);
-  decipherText = cipher.decode(number, text);
-  secondText.innerText = decipherText;
+  const decipherText = cipher.decode(number, text);
+  secondText.innerHTML = decipherText;
 });
 
 buttonRefresh.addEventListener('click', () => {
