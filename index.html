@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Caesar Cipher</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/e9f8da1aa8.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="header">
+      <ul class="list">
+        <li class ="img-container">
+            <img class="img" src="/img/padlock.png" alt="enigma">
+        </li>
+        <li class="items">
+          <h1 class="title">EnigmaChat</h1>
+        </li>
+        <li class="items">
+          <i class="fas fa-redo-alt" id="refresh"></i>
+        </li>
+        <li class="items">
+          <i class="fas fa-ellipsis-v" id="additional"></i>
+          <ul class="aside">
+            <li class="aside-items"><a href="https://www.whatsapp.com/?lang=es" target="_blank"><i class="fab fa-whatsapp"></i>   Whatsapp</a></li>
+            <li class="aside-items"><a href="https://web.telegram.org/#/login" target="_blank"><i class="fab fa-telegram"></i>  Telegram</a></li>
+            <li class="aside-items"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i>  Instagram</a></li>
+          </ul>
+        </li>
+      </ul>
+    </header>
+    <main class="main">
+      <section>
+        <p class="section"> 
+        Pon tus mensajes aquí y EnigmaChat los cifrará para que nadie pueda entenderlos.También desciframos mensajes ocultos que solo tú puedes averiguar. No olvides poner el número de desplazamiento que tendrán las letras.
+       </p>
+      </section>
+      <section>
+        <textarea  name= "textArea" id="firstText" class="firstText" ></textarea>
+        <div id="secondText" class="secondText" >
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <input type="submit" id="buttonCipher" value="Cifrar" >
+        <input type="submit" id="buttonDecipher" value="Descifrar">
+        <input type="number" id = "number" placeholder="0" min="0" required>
+      </div>
+    </footer>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
